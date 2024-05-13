@@ -19,7 +19,8 @@ class ImageSlider extends StatelessWidget {
         itemCount: 5,
         onPageChanged: onChange,
         itemBuilder: (context, index) {
-          return Image.asset(image);
+            return
+             Image.asset(image);
         },
       ),
     );

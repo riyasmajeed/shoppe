@@ -84,7 +84,7 @@ class ProductInfo extends StatelessWidget {
                 children: [
                   TextSpan(text: "Seller: "),
                   TextSpan(
-                    text: "Tarqul isalm",
+                    text: "Avaliable in stock",
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                     ),

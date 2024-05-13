@@ -25,38 +25,38 @@ class CheckOutBox extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(30),
-                borderSide: BorderSide.none,
-              ),
-              contentPadding: const EdgeInsets.symmetric(
-                vertical: 5,
-                horizontal: 15,
-              ),
-              filled: true,
-              fillColor: kcontentColor,
-              hintText: "Enter Discount Code",
-              hintStyle: const TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-                color: Colors.grey,
-              ),
-              suffixIcon: TextButton(
-                onPressed: () {},
-                child: const Text(
-                  "Apply",
-                  style: TextStyle(
-                    color: kprimaryColor,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-          ),
-          const SizedBox(height: 20),
+          // TextField(
+          //   decoration: InputDecoration(
+          //     border: OutlineInputBorder(
+          //       borderRadius: BorderRadius.circular(30),
+          //       borderSide: BorderSide.none,
+          //     ),
+          //     contentPadding: const EdgeInsets.symmetric(
+          //       vertical: 5,
+          //       horizontal: 15,
+          //     ),
+          //     filled: true,
+          //     fillColor: kcontentColor,
+          //     hintText: "Enter Discount Code",
+          //     hintStyle: const TextStyle(
+          //       fontSize: 14,
+          //       fontWeight: FontWeight.w600,
+          //       color: Colors.grey,
+          //     ),
+          //     suffixIcon: TextButton(
+          //       onPressed: () {},
+          //       child: const Text(
+          //         "Apply",
+          //         style: TextStyle(
+          //           color: kprimaryColor,
+          //           fontSize: 20,
+          //           fontWeight: FontWeight.bold,
+          //         ),
+          //       ),
+          //     ),
+          //   ),
+          // ),
+          const SizedBox(height: 50),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [

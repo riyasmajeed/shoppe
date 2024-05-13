@@ -41,57 +41,53 @@ class ProductCard extends StatelessWidget {
                     fontSize: 16,
                   ),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      "\$${product.price}",
-                      style: const TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                    ),
-                    Row(
-                      children: List.generate(
-                        product.colors.length,
-                        (cindex) => Container(
-                          height: 15,
-                          width: 15,
-                          margin: const EdgeInsets.only(right: 2),
-                          decoration: BoxDecoration(
-                            color: product.colors[cindex],
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                      ),
-                    )
-                  ],
-                )
+                // Row(
+
+                  
+                //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //   children: [
+                //     Container(
+                   
+                //       child: Text(
+                //         "\$${product.price}",
+                //         style: const TextStyle(
+                //           fontWeight: FontWeight.bold,
+                //           fontSize: 16,
+                //         ),
+                //       ),
+                //     ),
+                   
+                //   ],
+                // )
               ],
             ),
           ),
-          Positioned.fill(
-            child: Align(
-              alignment: Alignment.topRight,
-              child: Container(
-                width: 30,
-                height: 30,
-                decoration: const BoxDecoration(
-                  color: kprimaryColor,
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(20),
-                    bottomLeft: Radius.circular(10),
-                  ),
-                ),
-                child: const Icon(
-                  Ionicons.heart_outline,
-                  color: Colors.white,
-                  size: 18,
-                ),
+          Positioned(
+right: 10,
+top: 10,
+            child: Container(
+              width: 30,
+              height: 30,
+              decoration:  BoxDecoration(
+            
+              
+              ),
+              child:  Icon(
+                Ionicons.heart,
+                color: Color.fromARGB(255, 112, 107, 107),
+                size: 18,
               ),
             ),
           ),
+
+
+          Positioned(
+
+            
+            child: Container())
         ],
+
+        
       ),
     );
   }

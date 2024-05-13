@@ -108,7 +108,7 @@ class CartTile extends StatelessWidget {
                     ),
                     Text(
                       item.quantity.toString(),
-                      style: const TextStyle(
+                      style:  TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
                       ),
@@ -116,7 +116,7 @@ class CartTile extends StatelessWidget {
                     IconButton(
                       onPressed: onAdd,
                       iconSize: 18,
-                      icon: const Icon(
+                      icon:  Icon(
                         Ionicons.add_outline,
                         color: Colors.black,
                       ),

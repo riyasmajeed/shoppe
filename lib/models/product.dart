@@ -18,6 +18,8 @@ class Product {
     required this.category,
     required this.rate,
   });
+
+  static fromJson(data) {}
 }
 
 final List<Product> products = [

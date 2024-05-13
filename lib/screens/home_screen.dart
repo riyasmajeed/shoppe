@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:shop_example/constants.dart';
 import 'package:shop_example/models/category.dart';
@@ -30,10 +31,30 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const HomeAppBar(),
-                const SizedBox(height: 20),
-                const SearchField(),
-                const SizedBox(height: 20),
+                 HomeAppBar(),
+                Container(
+                  child:Column(
+mainAxisAlignment: MainAxisAlignment.start,
+crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                    
+
+                    Text("Hello Rocky ", style:TextStyle(
+fontSize: 25,fontWeight: FontWeight.bold ,color: Colors.black
+
+                    ) ,),
+
+                   Text("lets gets somthings? ", style:TextStyle(
+fontSize: 15,fontWeight: FontWeight.bold ,color: const Color.fromARGB(255, 125, 120, 120)
+
+                    ) ,),  
+
+                    ],
+                  ),
+                ),
+                 SizedBox(height: 20),
+             
+              
                 HomeSlider(
                   onChange: (value) {
                     setState(() {
@@ -43,24 +64,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   currentSlide: currentSlide,
                 ),
                 const SizedBox(height: 20),
-                const Categories(),
+                 Categories(),
                 const SizedBox(height: 25),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      "Special For You",
-                      style: TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    TextButton(
-                      onPressed: () {},
-                      child: const Text("See all"),
-                    ),
-                  ],
-                ),
+               
                 const SizedBox(height: 10),
                 GridView.builder(
                   physics: const NeverScrollableScrollPhysics(),

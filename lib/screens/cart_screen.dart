@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:shop_example/constants.dart';
 import 'package:shop_example/models/cart_item.dart';
+import 'package:shop_example/screens/home_screen.dart';
 import 'package:shop_example/widgets/cart_tile.dart';
 import 'package:shop_example/widgets/check_out_box.dart';
 
@@ -31,7 +32,12 @@ class _CartScreenState extends State<CartScreen> {
         leading: Padding(
           padding: const EdgeInsets.only(left: 5),
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+               Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => const HomeScreen()),
+  );
+            },
             style: IconButton.styleFrom(
               backgroundColor: Colors.white,
             ),

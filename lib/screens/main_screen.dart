@@ -15,7 +15,7 @@ class MainScreen extends StatefulWidget {
 
 class _MainScreenState extends State<MainScreen> {
   int currentTab = 2;
-  List screens = const [
+  List screens =  [
     Scaffold(),
     Scaffold(),
     HomeScreen(),
@@ -26,31 +26,41 @@ class _MainScreenState extends State<MainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            currentTab = 2;
-          });
-        },
-        shape: const CircleBorder(),
-        backgroundColor: kprimaryColor,
-        child: const Icon(
-          Iconsax.home,
-          color: Colors.white,
-        ),
-      ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () {
+      //     setState(() {
+      //       currentTab = 2;
+      //     });
+      //   },
+      //   shape: const CircleBorder(),
+      //   backgroundColor: kprimaryColor,
+      //   child:  Icon(
+      //     Iconsax.home,
+      //     color: Colors.white,
+      //   ),
+      // ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         elevation: 0,
         height: 70,
         color: Colors.white,
-        shape: const CircularNotchedRectangle(),
-        notchMargin: 5,
-        clipBehavior: Clip.antiAliasWithSaveLayer,
+       
+       
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+
+             IconButton(
+              onPressed: () => setState(() {
+                currentTab = 0;
+              }),
+              icon: Icon(
+                Ionicons.grid_outline,
+                color: currentTab == 0 ? kprimaryColor : Colors.grey.shade400,
+              ),
+            ),
+
             IconButton(
               onPressed: () => setState(() {
                 currentTab = 0;
@@ -61,15 +71,24 @@ class _MainScreenState extends State<MainScreen> {
               ),
             ),
             IconButton(
-              onPressed: () => setState(() {
-                currentTab = 1;
-              }),
+               onPressed: () {
+          setState(() {
+            currentTab = 2;
+          });
+        },
+              // onPressed: () => setState(() {
+            
+              // }),
               icon: Icon(
-                Ionicons.heart_outline,
-                color: currentTab == 1 ? kprimaryColor : Colors.grey.shade400,
+                Ionicons.home,
+
+
+                 color: currentTab == 1 ? kprimaryColor : Colors.grey.shade400,
               ),
             ),
             IconButton(
+
+
               onPressed: () => setState(() {
                 currentTab = 3;
               }),
